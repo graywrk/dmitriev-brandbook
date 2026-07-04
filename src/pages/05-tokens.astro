@@ -1,0 +1,95 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+---
+<Brandbook title="Токены" section="05-tokens">
+  <article class="doc">
+    <p class="eyebrow">Раздел 05</p>
+    <h1>Токены</h1>
+    <p class="lede">
+      <code>tokens/tokens.source.json</code> — единый источник правды в формате
+      W3C Design Tokens. Скрипт <code>tokens/sync.js</code> генерирует CSS-переменные
+      для сайта. AI-агенты читают JSON напрямую.
+    </p>
+
+    <section>
+      <h2>Формат W3C</h2>
+      <p>Каждый токен — объект с полями <code>$type</code>, <code>$value</code> и опциональным <code>$description</code>.</p>
+<pre class="code-block"><code set:html={`{
+  "color": {
+    "amber": {
+      "500": {
+        "$type": "color",
+        "$value": "#F59E0B",
+        "$description": "Базовый акцент. CTA, активные состояния."
+      }
+    }
+  }
+}`} /></pre>
+    </section>
+
+    <section>
+      <h2>Структура</h2>
+      <ul>
+        <li><strong>base</strong> — тема-независимые токены: янтарь, статусы, шрифты, размеры.</li>
+        <li><strong>dark</strong> — токены тёмной темы (canvas, surface, text и т.д.).</li>
+        <li><strong>light</strong> — токены светлой темы.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Как генерируется CSS</h2>
+      <p>Скрипт <code>tokens/sync.js</code> читает JSON и пишет <code>src/styles/tokens.css</code>:</p>
+<pre class="code-block"><code set:html={`:root {
+  --amber-500: #F59E0B;
+  --status-success: #10B981;
+  --font-sans: 'Golos Text', sans-serif;
+}
+
+[data-theme="dark"] {
+  --canvas: #0A0A0B;
+  --text: #F4F4F5;
+}
+
+[data-theme="light"] {
+  --canvas: #FAFAF9;
+  --text: #1C1917;
+}`} /></pre>
+    </section>
+
+    <section>
+      <h2>Для дизайнеров</h2>
+      <p>Подключите <code>tokens.css</code> и используйте переменные: <code>var(--amber-500)</code>, <code>var(--canvas)</code>.</p>
+    </section>
+
+    <section>
+      <h2>Для AI-агентов</h2>
+      <p>Читайте <code>tokens/tokens.source.json</code> напрямую. Поле <code>$description</code> объясняет назначение каждого значения. См. также <code>AGENTS.md</code> в корне репозитория.</p>
+    </section>
+
+    <section>
+      <h2>Команды</h2>
+      <ul class="cmd-list">
+        <li><code>npm run dev</code> — запуск с автогенерацией токенов (predev hook).</li>
+        <li><code>npm run build</code> — сборка (prebuild регенерирует токены).</li>
+        <li><code>npm test</code> — тесты sync-скрипта.</li>
+      </ul>
+    </section>
+  </article>
+</Brandbook>
+<style>
+  .doc { padding: 48px 0 80px; }
+  .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 16px; }
+  .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
+  .doc p, .doc .lede { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
+  .doc ul { margin: 0 0 16px 20px; color: var(--text-dim); line-height: 1.8; font-size: var(--text-body); }
+  .doc strong { color: var(--text); }
+  .doc code { color: var(--amber-500); }
+  .code-block {
+    background: var(--elevated); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; overflow-x: auto; font-family: var(--font-mono);
+    font-size: var(--text-small); color: var(--text-dim); line-height: 1.6;
+  }
+  .cmd-list { list-style: none; margin-left: 0 !important; }
+  .cmd-list li { padding: 6px 0; }
+</style>
