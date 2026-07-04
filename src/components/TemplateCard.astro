@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  theme?: 'dark' | 'light';
+}
+const { title, theme = 'dark' } = Astro.props;
+---
+<div class="template">
+  <div class="template__head">
+    <span class="template__title">{title}</span>
+    <span class:list={['template__theme', `template__theme--${theme}`]}>{theme}</span>
+  </div>
+  <div class="template__canvas" data-theme={theme}>
+    <slot />
+  </div>
+</div>
+<style>
+  .template { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); }
+  .template__head {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border-soft);
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: var(--text-small); color: var(--text-mute);
+  }
+  .template__title { font-weight: 600; }
+  .template__theme {
+    font-family: var(--font-mono); font-size: 0.6875rem;
+    padding: 2px 8px; border-radius: 20px;
+  }
+  .template__theme--dark { background: color-mix(in srgb, var(--amber-500) 12%, transparent); color: var(--amber-500); }
+  .template__theme--light { background: color-mix(in srgb, var(--text-mute) 14%, transparent); color: var(--text-dim); }
+  .template__canvas { padding: 28px 24px; }
+  /* the inner [data-theme] resolves tokens for the preview */
+  .template__canvas[data-theme="light"] {
+    background: var(--canvas);
+    color: var(--text);
+  }
+</style>

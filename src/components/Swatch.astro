@@ -1,0 +1,30 @@
+---
+interface Props {
+  name: string;
+  hex: string;
+  token: string;
+  role?: string;
+}
+const { name, hex, token, role } = Astro.props;
+---
+<div class="swatch">
+  <div class="swatch__chip" style={`background:${hex}`}></div>
+  <div class="swatch__info">
+    <div class="swatch__name">{name}</div>
+    {role && <div class="swatch__role">{role}</div>}
+    <div class="swatch__hex mono">{hex} · {token}</div>
+  </div>
+</div>
+<style>
+  .swatch {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .swatch__chip { height: 84px; }
+  .swatch__info { padding: 12px 14px; }
+  .swatch__name { font-size: var(--text-small); font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .swatch__role { font-size: 0.75rem; color: var(--text-mute); margin-bottom: 8px; }
+  .swatch__hex { color: var(--amber-500); }
+</style>

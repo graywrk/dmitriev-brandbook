@@ -1,0 +1,28 @@
+---
+interface Props { kind: 'do' | 'dont'; title: string; }
+const { kind, title } = Astro.props;
+---
+<div class:list={['rule', `rule--${kind}`]}>
+  <div class="rule__head">
+    <span class="rule__badge">{kind === 'do' ? 'DO' : "DON'T"}</span>
+    <h4>{title}</h4>
+  </div>
+  <div class="rule__body"><slot /></div>
+</div>
+<style>
+  .rule {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .rule__head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .rule__head h4 { font-size: var(--text-small); font-weight: 600; color: var(--text); }
+  .rule__badge {
+    font-size: 0.6875rem; font-weight: 700; padding: 3px 9px; border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+  .rule--do .rule__badge { background: color-mix(in srgb, var(--status-success) 14%, transparent); color: var(--status-success); }
+  .rule--dont .rule__badge { background: color-mix(in srgb, var(--status-error) 14%, transparent); color: var(--status-error); }
+  .rule__body { font-size: var(--text-small); color: var(--text-dim); line-height: 1.55; }
+</style>

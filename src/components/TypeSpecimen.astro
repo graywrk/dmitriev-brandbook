@@ -1,0 +1,26 @@
+---
+interface Props {
+  font: 'sans' | 'mono';
+  size: string;      // CSS value or var reference
+  weight: number;
+  sample: string;
+  label?: string;
+}
+const { font, size, weight, sample, label } = Astro.props;
+const fontFamily = font === 'mono' ? 'var(--font-mono)' : 'var(--font-sans)';
+---
+<div class="specimen">
+  {label && <div class="specimen__label eyebrow">{label}</div>}
+  <div
+    class="specimen__sample"
+    style={`font-family:${fontFamily};font-size:${size};font-weight:${weight}`}
+  >{sample}</div>
+</div>
+<style>
+  .specimen {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .specimen__label { margin-bottom: 10px; }
+  .specimen__sample { color: var(--text); line-height: 1.2; }
+</style>
