@@ -1,0 +1,98 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+import LogoMark from '../components/LogoMark.astro';
+import DoDont from '../components/DoDont.astro';
+---
+<Brandbook title="Логотип" section="02-logo">
+  <article class="doc">
+    <p class="eyebrow">Раздел 02</p>
+    <h1>Логотип</h1>
+
+    <section>
+      <h2>Состав</h2>
+      <p>
+        Логотип состоит из <strong>монограммы «СД»</strong> в янтарном градиентном
+        квадрате и <strong>словесного знака «Дмитриев»</strong>. Градиент идёт
+        по диагонали 135° от <code>#FBBF24</code> к <code>#D97706</code>.
+      </p>
+      <div class="logo-display">
+        <LogoMark size={80} variant="full" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Варианты</h2>
+      <div class="variants">
+        <div class="variant">
+          <LogoMark size={56} variant="full" />
+          <p>Полный (по умолчанию)</p>
+        </div>
+        <div class="variant">
+          <LogoMark size={56} variant="mark" />
+          <p>Только монограмма (аватары, favicon)</p>
+        </div>
+        <div class="variant">
+          <span class="word-only">Дмитриев</span>
+          <p>Только словесный знак (узкие места)</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Минимальный размер</h2>
+      <p>Цифровая среда: <strong>24px</strong>. Печать: <strong>12 мм</strong>. Ниже — не использовать.</p>
+      <div class="sizes">
+        <div class="size"><LogoMark size={52} /><span>52px</span></div>
+        <div class="size"><LogoMark size={36} /><span>36px</span></div>
+        <div class="size"><LogoMark size={24} /><span>24px min</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Охранное поле (clear space)</h2>
+      <p>Вокруг логотипа оставляется свободное пространство, равное <strong>высоте монограммы</strong> со всех сторон.</p>
+      <div class="clearspace">
+        <div class="clearspace__inner"><LogoMark size={48} variant="full" /></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Что нельзя делать</h2>
+      <div class="donts-grid">
+        <DoDont kind="dont" title="Не растягивать">Искажать пропорции монограммы.</DoDont>
+        <DoDont kind="dont" title="Не менять цвета">Использовать цвета вне янтарной шкалы.</DoDont>
+        <DoDont kind="dont" title="Не вращать">Поворачивать монограмму или текст.</DoDont>
+        <DoDont kind="dont" title="Без теней и эффектов">Добавлять тень, glow, bevel.</DoDont>
+      </div>
+    </section>
+  </article>
+</Brandbook>
+<style>
+  .doc { padding: 48px 0 80px; }
+  .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 32px; }
+  .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
+  .doc p { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc strong { color: var(--text); }
+  .doc code { color: var(--amber-500); }
+  .logo-display {
+    padding: 48px; display: flex; justify-content: center; align-items: center;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px; margin: 16px 0;
+  }
+  .variants, .sizes { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-end; margin: 16px 0; }
+  .variant, .size { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .variant p, .size span { font-size: var(--text-small); color: var(--text-mute); text-align: center; }
+  .word-only { font-family: var(--font-sans); font-weight: 700; font-size: 1.75rem; color: var(--text); }
+  .clearspace {
+    display: flex; justify-content: center; padding: 48px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px; margin: 16px 0;
+  }
+  .clearspace__inner {
+    padding: 48px;
+    border: 1px dashed var(--border);
+    outline: 1px dashed var(--amber-500);
+    outline-offset: -1px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .donts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 640px) { .donts-grid { grid-template-columns: 1fr; } }
+</style>
