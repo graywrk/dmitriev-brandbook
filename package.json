@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "node --test tokens/"
+    "test": "node --test tokens/*.test.js"
   },
   "dependencies": {
     "astro": "^4.16.0"
