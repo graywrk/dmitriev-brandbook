@@ -1,0 +1,119 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+import Swatch from '../components/Swatch.astro';
+import DoDont from '../components/DoDont.astro';
+
+const darkPalette = [
+  { name: 'Canvas', hex: '#0A0A0B', token: '--canvas', role: 'Фон страницы' },
+  { name: 'Surface', hex: '#101012', token: '--surface', role: 'Карточки, панели' },
+  { name: 'Elevated', hex: '#141416', token: '--elevated', role: 'Приподнятые элементы' },
+  { name: 'Border', hex: '#1F1F23', token: '--border', role: 'Тонкие границы' },
+  { name: 'Text', hex: '#F4F4F5', token: '--text', role: 'Основной текст' },
+  { name: 'Text Dim', hex: '#A1A1AA', token: '--text-dim', role: 'Вторичный текст' },
+];
+const lightPalette = [
+  { name: 'Canvas', hex: '#FAFAF9', token: '--canvas', role: 'Тёплый оффвайт' },
+  { name: 'Surface', hex: '#FFFFFF', token: '--surface', role: 'Карточки' },
+  { name: 'Border', hex: '#E7E5E4', token: '--border', role: 'Тонкие границы' },
+  { name: 'Text', hex: '#1C1917', token: '--text', role: 'Основной текст' },
+  { name: 'Text Dim', hex: '#57534E', token: '--text-dim', role: 'Вторичный текст' },
+];
+const amberScale = [
+  { hex: '#451A03', token: '--amber-900', step: '900' },
+  { hex: '#92400E', token: '--amber-700', step: '700' },
+  { hex: '#D97706', token: '--amber-600', step: '600 · deep' },
+  { hex: '#F59E0B', token: '--amber-500', step: '500 · base' },
+  { hex: '#FBBF24', token: '--amber-400', step: '400 · bright' },
+];
+const statusColors = [
+  { name: 'Success', hex: '#10B981', token: '--status-success', sem: 'healthy, running' },
+  { name: 'Warning', hex: '#F97316', token: '--status-warning', sem: 'degraded' },
+  { name: 'Error', hex: '#EF4444', token: '--status-error', sem: 'crash, down' },
+  { name: 'Info', hex: '#3B82F6', token: '--status-info', sem: 'deploying' },
+];
+---
+<Brandbook title="Цвет" section="03-color">
+  <article class="doc">
+    <p class="eyebrow">Раздел 03</p>
+    <h1>Цвет</h1>
+    <p class="lede">Янтарь — единственный UI-акцент. Тёмная тема основная, светлая — для документов и PDF.</p>
+
+    <section>
+      <h2>Тёмная тема · основная</h2>
+      <div class="swatch-grid">
+        {darkPalette.map((c) => <Swatch name={c.name} hex={c.hex} token={c.token} role={c.role} />)}
+      </div>
+    </section>
+
+    <section>
+      <h2>Светлая тема · документы и PDF</h2>
+      <div class="swatch-grid">
+        {lightPalette.map((c) => <Swatch name={c.name} hex={c.hex} token={c.token} role={c.role} />)}
+      </div>
+    </section>
+
+    <section>
+      <h2>Янтарная шкала · акцент</h2>
+      <div class="amber-scale">
+        {amberScale.map((a) => (
+          <div class="amber-step">
+            <div class="amber-step__chip" style={`background:${a.hex}`}></div>
+            <div class="amber-step__step">{a.step}</div>
+            <div class="amber-step__hex mono">{a.hex}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2>Статусные цвета</h2>
+      <p>Только для семантических состояний систем и процессов. Никогда — как UI-акцент.</p>
+      <div class="swatch-grid">
+        {statusColors.map((c) => <Swatch name={c.name} hex={c.hex} token={c.token} role={c.sem} />)}
+      </div>
+      <div class="kubectl-demo">
+        <div class="kubectl-demo__head mono">$ kubectl get pods</div>
+        <div class="kubectl-demo__body">
+          <div class="pod"><span class="pip" style="background:#10B981"></span> api-gateway <span class="st" style="color:#10B981">Running</span></div>
+          <div class="pod"><span class="pip" style="background:#10B981"></span> payment-service <span class="st" style="color:#10B981">Running</span></div>
+          <div class="pod"><span class="pip" style="background:#F97316"></span> search-indexer <span class="st" style="color:#F97316">Degraded</span></div>
+          <div class="pod"><span class="pip" style="background:#EF4444"></span> legacy-worker <span class="st" style="color:#EF4444">CrashLoop</span></div>
+          <div class="pod"><span class="pip" style="background:#3B82F6"></span> analytics-sync <span class="st" style="color:#3B82F6">Deploying</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Правила</h2>
+      <div class="rules-grid">
+        <DoDont kind="do" title="Янтарь — только акцент">CTA, ссылки, ключевые числа. Никогда как фон блока.</DoDont>
+        <DoDont kind="dont" title="Не вводить второй цвет">Один акцент = одна система. Статусы — только для систем.</DoDont>
+        <DoDont kind="do" title="Контраст ≥ 7:1 для текста">Основные комбинации проходят WCAG AAA.</DoDont>
+        <DoDont kind="dont" title="Янтарь на белом">#F59E0B на белом — низкий контраст. На светлом — #D97706.</DoDont>
+      </div>
+    </section>
+  </article>
+</Brandbook>
+<style>
+  .doc { padding: 48px 0 80px; }
+  .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 16px; }
+  .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
+  .doc p { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
+  .swatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 700px) { .swatch-grid { grid-template-columns: repeat(2, 1fr); } }
+  .amber-scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  @media (max-width: 700px) { .amber-scale { grid-template-columns: repeat(3, 1fr); } }
+  .amber-step { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); }
+  .amber-step__chip { height: 64px; }
+  .amber-step__step { padding: 6px 10px 0; font-size: 0.6875rem; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.1em; }
+  .amber-step__hex { padding: 2px 10px 8px; color: var(--amber-500); font-size: 0.6875rem; }
+  .kubectl-demo { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 16px; background: var(--surface); }
+  .kubectl-demo__head { padding: 12px 18px; border-bottom: 1px solid var(--border-soft); color: var(--text-mute); font-size: var(--text-small); }
+  .kubectl-demo__body { padding: 16px 18px; font-family: var(--font-mono); font-size: var(--text-small); }
+  .pod { display: flex; align-items: center; gap: 10px; color: var(--text-dim); padding: 3px 0; }
+  .pod .pip { width: 9px; height: 9px; border-radius: 50%; }
+  .pod .st { font-weight: 600; margin-left: auto; }
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 640px) { .rules-grid { grid-template-columns: 1fr; } }
+</style>
