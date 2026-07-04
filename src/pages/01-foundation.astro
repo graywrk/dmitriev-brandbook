@@ -1,0 +1,107 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+import DoDont from '../components/DoDont.astro';
+---
+<Brandbook title="Фундамент" section="01-foundation">
+  <article class="doc">
+    <p class="eyebrow">Раздел 01</p>
+    <h1>Фундамент бренда</h1>
+
+    <section>
+      <h2>Манифест</h2>
+      <p class="lede">
+        Я — Сергей Дмитриев, DevOps-инженер с опытом эксплуатации инфраструктуры
+        под нагрузкой бигтеха. Я строил системы, которые выдерживают миллионы
+        пользователей. Теперь помогаю компаниям делать то же самое — без хайпа
+        и overengineering.
+      </p>
+    </section>
+
+    <section>
+      <h2>Позиционирование</h2>
+      <p>
+        Премиум-консалтинг по инфраструктуре для растущих компаний. Мост между
+        инженерией и бизнесом: говорю с CTO на языке архитектуры, с CEO — на
+        языке денег и рисков.
+      </p>
+      <ul>
+        <li><strong>Для кого:</strong> CTO, техлиды, руководители инфраструктуры растущих компаний.</li>
+        <li><strong>Какую проблему решаю:</strong> инфраструктура, которая не масштабируется, дорогая в поддержке, ломается под нагрузкой.</li>
+        <li><strong>Чем отличаюсь:</strong> реальный опыт масштабов бигтеха, а не теория. Прагматизм над модой.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Принципы работы</h2>
+      <ol>
+        <li><strong>Прагматизм над хайпом.</strong> Kubernetes ради Kubernetes — это долг. Выбираю то, что работает.</li>
+        <li><strong>Метрики над словами.</strong> Каждое решение обосновано числами: RPS, latency, cost, MTTR.</li>
+        <li><strong>Overengineering — зло.</strong> Сложность должна быть оправдана. Простое решение лучше умного.</li>
+        <li><strong>Инфраструктура — это актив.</strong> Не костыль, а то, что приносит или экономит деньги.</li>
+        <li><strong>Прозрачность.</strong> Клиент понимает, что и почему сделано. Никакого чёрного ящика.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Голос и тон</h2>
+      <p>
+        Уверенный, прямой, по делу. Без воды и buzzwords. Объясняю сложное
+        простым языком. Допускаю лёгкую иронию к хайпу, но всегда уважительно
+        к собеседнику.
+      </p>
+      <div class="rules-grid">
+        <DoDont kind="do" title="Так">
+          «Перевели оплатный сервис на очереди. Latency p99 упал с 800 мс до 120 мс,
+          инфраструктурные косты — на 30%. Читайте кейс →»
+        </DoDont>
+        <DoDont kind="dont" title="Не так">
+          «Мы переосмыслили архитектуру с помощью cutting-edge cloud-native
+          технологий, обеспечив synergy и scalability для вашего бизнеса.»
+        </DoDont>
+      </div>
+    </section>
+
+    <section>
+      <h2>Словарь</h2>
+      <h3>Использую</h3>
+      <p class="vocab">
+        <span class="tag tag--do">инфраструктура</span>
+        <span class="tag tag--do">масштаб</span>
+        <span class="tag tag--do">нагрузка</span>
+        <span class="tag tag--do">метрики</span>
+        <span class="tag tag--do">прагматичный</span>
+        <span class="tag tag--do">overengineering</span>
+        <span class="tag tag--do">MTTR</span>
+        <span class="tag tag--do">latency</span>
+      </p>
+      <h3>Избегаю</h3>
+      <p class="vocab">
+        <span class="tag tag--dont">cutting-edge</span>
+        <span class="tag tag--dont">synergy</span>
+        <span class="tag tag--dont">переосмыслить</span>
+        <span class="tag tag--dont">революционный</span>
+        <span class="tag tag--dont">game-changer</span>
+        <span class="tag tag--dont">глобально</span>
+      </p>
+    </section>
+  </article>
+</Brandbook>
+<style>
+  .doc { padding: 48px 0 80px; }
+  .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 32px; }
+  .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
+  .doc h3 { font-size: var(--text-h3); font-weight: 600; margin: 20px 0 10px; }
+  .doc p { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
+  .doc ul, .doc ol { margin: 0 0 16px 20px; color: var(--text-dim); line-height: 1.7; font-size: var(--text-body); }
+  .doc strong { color: var(--text); }
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 640px) { .rules-grid { grid-template-columns: 1fr; } }
+  .vocab { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-family: var(--font-mono); font-size: var(--text-small);
+    padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);
+  }
+  .tag--do { color: var(--status-success); border-color: color-mix(in srgb, var(--status-success) 30%, transparent); }
+  .tag--dont { color: var(--status-error); border-color: color-mix(in srgb, var(--status-error) 30%, transparent); text-decoration: line-through; }
+</style>
