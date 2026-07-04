@@ -1,0 +1,60 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+import TypeSpecimen from '../components/TypeSpecimen.astro';
+---
+<Brandbook title="Типографика" section="04-typography">
+  <article class="doc">
+    <p class="eyebrow">Раздел 04</p>
+    <h1>Типографика</h1>
+    <p class="lede">Два шрифта: Golos Text для всего текста, JetBrains Mono для кода и технических акцентов. Оба с полной кириллицей.</p>
+
+    <section>
+      <h2>Шрифты</h2>
+      <div class="font-block">
+        <div class="font-block__name">Golos Text <span class="font-block__role">— заголовки и текст</span></div>
+        <TypeSpecimen font="sans" size="2.5rem" weight={700} sample="Инфраструктура как актив" />
+        <TypeSpecimen font="sans" size="var(--text-body)" weight={400} sample="Янтарь — наш единственный акцент. Используем его точечно: кнопки, ссылки, ключевые числа." />
+      </div>
+      <div class="font-block">
+        <div class="font-block__name">JetBrains Mono <span class="font-block__role">— код и технические акценты</span></div>
+        <TypeSpecimen font="mono" size="1.125rem" weight={500} sample="$ terraform apply -auto-approve" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Шкала размеров</h2>
+      <div class="scale">
+        <div class="scale__row"><span class="scale__token mono">text-h1 · 2.125rem</span><span style="font-size:var(--text-h1);font-weight:700;letter-spacing:-0.02em">Масштаб без хаоса</span></div>
+        <div class="scale__row"><span class="scale__token mono">text-h2 · 1.5rem</span><span style="font-size:var(--text-h2);font-weight:700">Принципы моей работы</span></div>
+        <div class="scale__row"><span class="scale__token mono">text-h3 · 1.125rem</span><span style="font-size:var(--text-h3);font-weight:600">Что я делаю</span></div>
+        <div class="scale__row"><span class="scale__token mono">text-body · 0.9375rem</span><span style="font-size:var(--text-body);color:var(--text-dim)">Основной текст повествования. Читаемый, нейтральный.</span></div>
+        <div class="scale__row"><span class="scale__token mono">text-eyebrow · 0.6875rem</span><span class="eyebrow">Надзаголовок</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Правила</h2>
+      <ul>
+        <li>Межстрочный: 1.5–1.6 для body, 1.1–1.2 для крупных заголовков.</li>
+        <li>Letter-spacing: −0.02em для H1/H2, 0.22em uppercase для eyebrow.</li>
+        <li>Длина строки body: 60–75 символов для читаемости.</li>
+        <li>Моноширинный — только для кода, команд, технических меток. Не для основного текста.</li>
+      </ul>
+    </section>
+  </article>
+</Brandbook>
+<style>
+  .doc { padding: 48px 0 80px; }
+  .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 16px; }
+  .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
+  .doc p, .doc .lede { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
+  .doc ul { margin: 0 0 16px 20px; color: var(--text-dim); line-height: 1.8; font-size: var(--text-body); }
+  .font-block { margin-bottom: 28px; }
+  .font-block__name { font-size: var(--text-h3); font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .font-block__role { font-size: var(--text-body); color: var(--text-mute); font-weight: 400; }
+  .scale { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--surface); }
+  .scale__row { display: flex; align-items: baseline; gap: 20px; padding: 16px 20px; border-bottom: 1px solid var(--border-soft); }
+  .scale__row:last-child { border-bottom: none; }
+  .scale__token { color: var(--amber-500); min-width: 200px; font-size: var(--text-small); }
+</style>
