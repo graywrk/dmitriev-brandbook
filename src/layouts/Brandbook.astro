@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+import LogoMark from '../components/LogoMark.astro';
+
+interface Props {
+  title: string;
+  section?: string;
+}
+
+const { title, section } = Astro.props;
+const sections = [
+  { id: '01-foundation', label: '01 · Фундамент' },
+  { id: '02-logo', label: '02 · Логотип' },
+  { id: '03-color', label: '03 · Цвет' },
+  { id: '04-typography', label: '04 · Типографика' },
+  { id: '05-tokens', label: '05 · Токены' },
+  { id: '06-application', label: '06 · Применение' },
+];
+---
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} · Брендбук Сергея Дмитриева</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="/" class="site-logo">
+          <LogoMark size={28} />
+          <span>Дмитриев</span>
+        </a>
+        <nav class="site-nav">
+          {sections.map((s) => (
+            <a
+              href={`/${s.id}`}
+              class:list={[{ active: section === s.id }]}
+            >{s.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <style>
+      .site-header {
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        background: var(--canvas);
+        z-index: 10;
+      }
+      .site-header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+      }
+      .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        color: var(--text);
+        font-size: 1rem;
+      }
+      .site-nav {
+        display: flex;
+        gap: 18px;
+        font-size: var(--text-small);
+        color: var(--text-mute);
+      }
+      .site-nav a {
+        color: var(--text-mute);
+      }
+      .site-nav a:hover,
+      .site-nav a.active {
+        color: var(--amber-500);
+      }
+      @media (max-width: 760px) {
+        .site-nav { display: none; }
+      }
+    </style>
+  </body>
+</html>

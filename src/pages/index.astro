@@ -1,0 +1,87 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+
+const sections = [
+  { id: '01-foundation', num: '01', title: 'Фундамент', desc: 'Манифест, позиционирование, голос и тон' },
+  { id: '02-logo', num: '02', title: 'Логотип', desc: 'Монограмма, словесный знак, применения' },
+  { id: '03-color', num: '03', title: 'Цвет', desc: 'Палитра, темы, янтарь, статусы, контраст' },
+  { id: '04-typography', num: '04', title: 'Типографика', desc: 'Шрифты, шкала, иерархия, пары' },
+  { id: '05-tokens', num: '05', title: 'Токены', desc: 'Формат W3C, как читать JSON' },
+  { id: '06-application', num: '06', title: 'Применение', desc: 'Баннеры, кейсы, слайды, соцсети, PDF' },
+];
+---
+<Brandbook title="Брендбук">
+  <section class="hero">
+    <p class="eyebrow">Брендбук · Сергей Дмитриев</p>
+    <h1>Инфраструктура как актив,<br />а не костыль.</h1>
+    <p class="lede">
+      DevOps-консалтинг на основе реального опыта масштабов бигтеха.
+      Единый источник правды для дизайнеров и AI-агентов.
+    </p>
+  </section>
+  <nav class="section-grid">
+    {sections.map((s) => (
+      <a class="section-card" href={`/${s.id}`}>
+        <div class="section-card__num">{s.num}</div>
+        <div>
+          <h3>{s.title}</h3>
+          <p>{s.desc}</p>
+        </div>
+      </a>
+    ))}
+  </nav>
+</Brandbook>
+<style>
+  .hero { padding: 64px 0 48px; }
+  .hero .eyebrow { display: block; margin-bottom: 18px; }
+  .hero h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .lede {
+    font-size: var(--text-body-lg);
+    color: var(--text-dim);
+    max-width: 560px;
+  }
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: 640px) {
+    .section-grid { grid-template-columns: 1fr; }
+  }
+  .section-card {
+    display: flex;
+    gap: 16px;
+    padding: 22px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    transition: border-color .2s, transform .2s;
+  }
+  .section-card:hover {
+    border-color: var(--amber-500);
+    transform: translateY(-2px);
+  }
+  .section-card__num {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    color: var(--amber-500);
+    font-weight: 600;
+  }
+  .section-card h3 {
+    font-size: var(--text-h3);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .section-card p {
+    font-size: var(--text-small);
+    color: var(--text-dim);
+  }
+</style>
