@@ -1,0 +1,146 @@
+---
+import Brandbook from '../layouts/Brandbook.astro';
+import LogoMark from '../components/LogoMark.astro';
+import TemplateCard from '../components/TemplateCard.astro';
+---
+<Brandbook title="Применение" section="06-application">
+  <article class="doc">
+    <p class="eyebrow">Раздел 06</p>
+    <h1>Применение</h1>
+    <p class="lede">Готовые шаблоны для типовых материалов. Каждый показан в обеих темах.</p>
+
+    <section>
+      <h2>Баннер для сайта / блога</h2>
+      <div class="template-pair">
+        <TemplateCard title="Баннер · hero" theme="dark">
+          <div class="tpl-hero">
+            <p class="tpl-hero__eyebrow eyebrow">Кейс · Wildberries</p>
+            <h3 class="tpl-hero__title">Снизили latency p99 на 70%</h3>
+            <p class="tpl-hero__text">Перевели платёжный сервис на асинхронные очереди. Метрики и разбор — внутри.</p>
+            <span class="tpl-btn">Читать кейс →</span>
+          </div>
+        </TemplateCard>
+        <TemplateCard title="Баннер · hero" theme="light">
+          <div class="tpl-hero">
+            <p class="tpl-hero__eyebrow eyebrow">Кейс · Wildberries</p>
+            <h3 class="tpl-hero__title">Снизили latency p99 на 70%</h3>
+            <p class="tpl-hero__text">Перевели платёжный сервис на асинхронные очереди. Метрики и разбор — внутри.</p>
+            <span class="tpl-btn">Читать кейс →</span>
+          </div>
+        </TemplateCard>
+      </div>
+    </section>
+
+    <section>
+      <h2>Карточка кейса</h2>
+      <div class="template-pair">
+        <TemplateCard title="Карточка кейса" theme="dark">
+          <div class="tpl-case">
+            <div class="tpl-case__head">
+              <LogoMark size={28} />
+              <span class="tpl-case__tag mono">FINTECH</span>
+            </div>
+            <h4 class="tpl-case__title">Платёжный сервис: 800→120 мс</h4>
+            <div class="tpl-case__metric"><span class="num">70%</span><span class="lbl">ниже latency p99</span></div>
+            <div class="tpl-case__metric"><span class="num">30%</span><span class="lbl">дешевле инфраструктура</span></div>
+          </div>
+        </TemplateCard>
+        <TemplateCard title="Карточка кейса" theme="light">
+          <div class="tpl-case">
+            <div class="tpl-case__head">
+              <LogoMark size={28} />
+              <span class="tpl-case__tag mono">FINTECH</span>
+            </div>
+            <h4 class="tpl-case__title">Платёжный сервис: 800→120 мс</h4>
+            <div class="tpl-case__metric"><span class="num">70%</span><span class="lbl">ниже latency p99</span></div>
+            <div class="tpl-case__metric"><span class="num">30%</span><span class="lbl">дешевле инфраструктура</span></div>
+          </div>
+        </TemplateCard>
+      </div>
+    </section>
+
+    <section>
+      <h2>Слайд презентации</h2>
+      <TemplateCard title="Слайд 16:9" theme="dark">
+        <div class="tpl-slide">
+          <span class="tpl-slide__eyebrow eyebrow">Принцип 01</span>
+          <h3 class="tpl-slide__title">Прагматизм над хайпом</h3>
+          <p class="tpl-slide__text">Kubernetes ради Kubernetes — это долг. Выбираю то, что работает.</p>
+          <div class="tpl-slide__foot"><LogoMark size={24} /><span class="mono">dmitriev.consulting</span></div>
+        </div>
+      </TemplateCard>
+    </section>
+
+    <section>
+      <h2>Пост в соцсети</h2>
+      <div class="template-pair">
+        <TemplateCard title="Telegram-пост" theme="dark">
+          <div class="tpl-post">
+            <div class="tpl-post__head"><LogoMark size={32} /><div><strong>Сергей Дмитриев</strong><br/><span class="tpl-post__sub mono">DevOps · Infrastructure</span></div></div>
+            <p>Перевели оплатный сервис на очереди.</p>
+            <p>Latency p99: 800 мс → 120 мс.<br/>Инфраструктурные косты: −30%.</p>
+            <p>Никакого cutting-edge. Старый добрый RabbitMQ и честные метрики.</p>
+          </div>
+        </TemplateCard>
+        <TemplateCard title="LinkedIn-пост" theme="light">
+          <div class="tpl-post">
+            <div class="tpl-post__head"><LogoMark size={32} /><div><strong>Сергей Дмитриев</strong><br/><span class="tpl-post__sub mono">DevOps Consulting</span></div></div>
+            <p>How we cut p99 latency by 70%: async queues over synchronous calls.</p>
+            <p>Pragmatism over hype. Real metrics below. ⬇️</p>
+          </div>
+        </TemplateCard>
+      </div>
+    </section>
+
+    <section>
+      <h2>PDF-кейс для клиентов</h2>
+      <TemplateCard title="Обложка PDF-кейса" theme="light">
+        <div class="tpl-pdf">
+          <div class="tpl-pdf__top"><LogoMark size={40} variant="full" /></div>
+          <div class="tpl-pdf__center">
+            <span class="eyebrow">Кейс · 2026</span>
+            <h3>Масштабирование платёжного сервиса<br/>от 1k до 50k RPS</h3>
+            <p>Как мы сохранили SLA 99.95% при росте нагрузки в 50 раз.</p>
+          </div>
+          <div class="tpl-pdf__bottom mono">dmitriev.consulting · sergey@dmitriev.consulting</div>
+        </div>
+      </TemplateCard>
+    </section>
+  </article>
+</Brandbook>
+<style>
+  .doc { padding: 48px 0 80px; }
+  .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 16px; }
+  .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
+  .doc p, .doc .lede { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
+  .template-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .template-pair { grid-template-columns: 1fr; } }
+
+  /* shared template inner styles resolve via cascade tokens */
+  .tpl-hero__title { font-size: var(--text-h2); font-weight: 700; color: var(--text); margin: 8px 0 8px; }
+  .tpl-hero__text { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 16px; }
+  .tpl-btn { display: inline-block; background: var(--amber-500); color: var(--canvas); padding: 9px 16px; border-radius: 8px; font-size: var(--text-small); font-weight: 600; }
+
+  .tpl-case__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .tpl-case__tag { font-size: var(--text-small); color: var(--amber-600); }
+  .tpl-case__title { font-size: var(--text-h3); font-weight: 600; color: var(--text); margin-bottom: 14px; }
+  .tpl-case__metric { display: flex; align-items: baseline; gap: 10px; padding: 8px 0; border-top: 1px solid var(--border-soft); }
+  .tpl-case__metric .num { font-family: var(--font-mono); font-size: var(--text-h3); font-weight: 600; color: var(--amber-600); }
+  .tpl-case__metric .lbl { font-size: var(--text-small); color: var(--text-dim); }
+
+  .tpl-slide { min-height: 180px; display: flex; flex-direction: column; }
+  .tpl-slide__title { font-size: var(--text-h1); font-weight: 700; color: var(--text); margin: 10px 0 10px; letter-spacing: -0.02em; }
+  .tpl-slide__text { font-size: var(--text-body-lg); color: var(--text-dim); margin-bottom: auto; }
+  .tpl-slide__foot { display: flex; align-items: center; gap: 10px; padding-top: 16px; color: var(--text-mute); font-size: var(--text-small); }
+
+  .tpl-post__head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--text); font-size: var(--text-small); }
+  .tpl-post__sub { color: var(--text-mute); font-size: 0.6875rem; }
+  .tpl-post p { font-size: var(--text-body); color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+
+  .tpl-pdf { min-height: 280px; display: flex; flex-direction: column; }
+  .tpl-pdf__center { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .tpl-pdf__center h3 { font-size: var(--text-h2); font-weight: 700; color: var(--text); margin: 10px 0 8px; line-height: 1.2; }
+  .tpl-pdf__center p { font-size: var(--text-body); color: var(--text-dim); }
+  .tpl-pdf__bottom { padding-top: 20px; border-top: 1px solid var(--border-soft); color: var(--text-mute); font-size: var(--text-small); }
+</style>
