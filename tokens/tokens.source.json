@@ -1,0 +1,51 @@
+{
+  "base": {
+    "amber": {
+      "900": { "$type": "color", "$value": "#451A03", "$description": "Тёмные фоны-акценты" },
+      "700": { "$type": "color", "$value": "#92400E", "$description": "Глубокий янтарь, редко" },
+      "600": { "$type": "color", "$value": "#D97706", "$description": "Текстовый акцент на светлом фоне" },
+      "500": { "$type": "color", "$value": "#F59E0B", "$description": "Базовый акцент. CTA, активные состояния, ссылки" },
+      "400": { "$type": "color", "$value": "#FBBF24", "$description": "Bright, hover-состояния" }
+    },
+    "status": {
+      "success": { "$type": "color", "$value": "#10B981", "$description": "Успех, healthy, running" },
+      "warning": { "$type": "color", "$value": "#F97316", "$description": "Деградация, degraded" },
+      "error": { "$type": "color", "$value": "#EF4444", "$description": "Ошибка, crash, down" },
+      "info": { "$type": "color", "$value": "#3B82F6", "$description": "Информация, deploying" }
+    },
+    "font": {
+      "sans": { "$type": "fontFamily", "$value": "'Golos Text', 'Inter', system-ui, sans-serif" },
+      "mono": { "$type": "fontFamily", "$value": "'JetBrains Mono', 'Courier New', monospace" }
+    },
+    "text": {
+      "h1": { "$type": "dimension", "$value": "2.125rem" },
+      "h2": { "$type": "dimension", "$value": "1.5rem" },
+      "h3": { "$type": "dimension", "$value": "1.125rem" },
+      "body-lg": { "$type": "dimension", "$value": "1.0625rem" },
+      "body": { "$type": "dimension", "$value": "0.9375rem" },
+      "small": { "$type": "dimension", "$value": "0.8125rem" },
+      "mono": { "$type": "dimension", "$value": "0.8125rem" },
+      "eyebrow": { "$type": "dimension", "$value": "0.6875rem" }
+    }
+  },
+  "dark": {
+    "canvas": { "$type": "color", "$value": "#0A0A0B" },
+    "surface": { "$type": "color", "$value": "#101012" },
+    "elevated": { "$type": "color", "$value": "#141416" },
+    "border": { "$type": "color", "$value": "#1F1F23" },
+    "border-soft": { "$type": "color", "$value": "#18181C" },
+    "text": { "$type": "color", "$value": "#F4F4F5" },
+    "text-dim": { "$type": "color", "$value": "#A1A1AA" },
+    "text-mute": { "$type": "color", "$value": "#71717A" }
+  },
+  "light": {
+    "canvas": { "$type": "color", "$value": "#FAFAF9" },
+    "surface": { "$type": "color", "$value": "#FFFFFF" },
+    "elevated": { "$type": "color", "$value": "#FFFFFF" },
+    "border": { "$type": "color", "$value": "#E7E5E4" },
+    "border-soft": { "$type": "color", "$value": "#F5F5F4" },
+    "text": { "$type": "color", "$value": "#1C1917" },
+    "text-dim": { "$type": "color", "$value": "#57534E" },
+    "text-mute": { "$type": "color", "$value": "#78716C" }
+  }
+}
