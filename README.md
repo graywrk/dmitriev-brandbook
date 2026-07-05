@@ -7,6 +7,7 @@
 - **Astro-сайт** с 6 разделами: Фундамент, Логотип, Цвет, Типографика, Токены, Применение.
 - **Токены** в формате W3C Design Tokens (`tokens/tokens.source.json`) — единственный источник правды.
 - **AGENTS.md** — компактный бренд-бриф для AI-агентов.
+- **prompts/** — 24 готовых промпт-шаблона (12 RU + 12 EN) для генерации контента в стиле бренда: текстовые (telegram/linkedin/case-study/...), визуальные (social-cover/og-image/...), UI/code (компоненты, лендинги, README). См. [`prompts/README.md`](prompts/README.md).
 
 ## Запуск
 
@@ -25,6 +26,7 @@ tokens/sync.js              # JSON → CSS
 src/styles/tokens.css       # автогенерация (не редактировать)
 src/pages/                  # 6 разделов брендбука
 src/components/             # LogoMark, Swatch, TypeSpecimen, DoDont, TemplateCard
+prompts/                    # 24 AI-промпта (text/visual/ui × RU+EN)
 AGENTS.md                   # AI-бриф
 ```
 
