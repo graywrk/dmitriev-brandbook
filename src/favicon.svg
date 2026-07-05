@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favicon-amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#favicon-amber)"/>
+  <text x="16" y="16" text-anchor="middle" dominant-baseline="central" font-family="'Golos Text', system-ui, sans-serif" font-weight="800" font-size="14" fill="#0A0A0B" letter-spacing="-0.3">СД</text>
+</svg>

@@ -112,7 +112,7 @@ import TemplateCard from '../components/TemplateCard.astro';
   .doc { padding: 48px 0 80px; }
   .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 16px; }
   .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
-  .doc p, .doc .lede { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc p:not(.eyebrow), .doc .lede { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
   .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
   .template-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 640px) { .template-pair { grid-template-columns: 1fr; } }

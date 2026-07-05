@@ -1,0 +1,159 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "Логотип Сергея Дмитриева Дмитриев" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+        - img "Логотип Сергея Дмитриева" [ref=f4e5]:
+          - generic [ref=f4e7]: СД
+        - generic [ref=f4e8]: Дмитриев
+      - navigation [ref=f4e9]:
+        - link "01 · Фундамент" [ref=f4e10] [cursor=pointer]:
+          - /url: /01-foundation
+        - link "02 · Логотип" [ref=f4e11] [cursor=pointer]:
+          - /url: /02-logo
+        - link "03 · Цвет" [ref=f4e12] [cursor=pointer]:
+          - /url: /03-color
+        - link "04 · Типографика" [ref=f4e13] [cursor=pointer]:
+          - /url: /04-typography
+        - link "05 · Токены" [ref=f4e14] [cursor=pointer]:
+          - /url: /05-tokens
+        - link "06 · Применение" [ref=f4e15] [cursor=pointer]:
+          - /url: /06-application
+  - main [ref=f4e16]:
+    - article [ref=f4e17]:
+      - paragraph [ref=f4e18]: Раздел 06
+      - heading "Применение" [level=1] [ref=f4e19]
+      - paragraph [ref=f4e20]: Готовые шаблоны для типовых материалов. Цифровые — в обеих темах; презентационные — в контекстной (слайды для тёмных залов, PDF для печати).
+      - generic [ref=f4e21]:
+        - heading "Баннер для сайта / блога" [level=2] [ref=f4e22]
+        - generic [ref=f4e23]:
+          - generic [ref=f4e24]:
+            - generic [ref=f4e25]:
+              - generic [ref=f4e26]: Баннер · hero
+              - generic [ref=f4e27]: dark
+            - generic [ref=f4e29]:
+              - paragraph [ref=f4e30]: Кейс · Wildberries
+              - heading "Снизили latency p99 на 70%" [level=3] [ref=f4e31]
+              - paragraph [ref=f4e32]: Перевели платёжный сервис на асинхронные очереди. Метрики и разбор — внутри.
+              - generic [ref=f4e33]: Читать кейс →
+          - generic [ref=f4e34]:
+            - generic [ref=f4e35]:
+              - generic [ref=f4e36]: Баннер · hero
+              - generic [ref=f4e37]: light
+            - generic [ref=f4e39]:
+              - paragraph [ref=f4e40]: Кейс · Wildberries
+              - heading "Снизили latency p99 на 70%" [level=3] [ref=f4e41]
+              - paragraph [ref=f4e42]: Перевели платёжный сервис на асинхронные очереди. Метрики и разбор — внутри.
+              - generic [ref=f4e43]: Читать кейс →
+      - generic [ref=f4e44]:
+        - heading "Карточка кейса" [level=2] [ref=f4e45]
+        - generic [ref=f4e46]:
+          - generic [ref=f4e47]:
+            - generic [ref=f4e48]:
+              - generic [ref=f4e49]: Карточка кейса
+              - generic [ref=f4e50]: dark
+            - generic [ref=f4e52]:
+              - generic [ref=f4e53]:
+                - img "Логотип Сергея Дмитриева" [ref=f4e54]:
+                  - generic [ref=f4e56]: СД
+                - generic [ref=f4e57]: FINTECH
+              - 'heading "Платёжный сервис: 800→120 мс" [level=4] [ref=f4e58]'
+              - generic [ref=f4e59]:
+                - generic [ref=f4e60]: 70%
+                - generic [ref=f4e61]: ниже latency p99
+              - generic [ref=f4e62]:
+                - generic [ref=f4e63]: 30%
+                - generic [ref=f4e64]: дешевле инфраструктура
+          - generic [ref=f4e65]:
+            - generic [ref=f4e66]:
+              - generic [ref=f4e67]: Карточка кейса
+              - generic [ref=f4e68]: light
+            - generic [ref=f4e70]:
+              - generic [ref=f4e71]:
+                - img "Логотип Сергея Дмитриева" [ref=f4e72]:
+                  - generic [ref=f4e74]: СД
+                - generic [ref=f4e75]: FINTECH
+              - 'heading "Платёжный сервис: 800→120 мс" [level=4] [ref=f4e76]'
+              - generic [ref=f4e77]:
+                - generic [ref=f4e78]: 70%
+                - generic [ref=f4e79]: ниже latency p99
+              - generic [ref=f4e80]:
+                - generic [ref=f4e81]: 30%
+                - generic [ref=f4e82]: дешевле инфраструктура
+      - generic [ref=f4e83]:
+        - heading "Слайд презентации" [level=2] [ref=f4e84]
+        - generic [ref=f4e85]:
+          - generic [ref=f4e86]:
+            - generic [ref=f4e87]: Слайд 16:9
+            - generic [ref=f4e88]: dark
+          - generic [ref=f4e90]:
+            - generic [ref=f4e91]: Принцип 01
+            - heading "Прагматизм над хайпом" [level=3] [ref=f4e92]
+            - paragraph [ref=f4e93]: Kubernetes ради Kubernetes — это долг. Выбираю то, что работает.
+            - generic [ref=f4e94]:
+              - img "Логотип Сергея Дмитриева" [ref=f4e95]:
+                - generic [ref=f4e97]: СД
+              - generic [ref=f4e98]: dmitriev.consulting
+      - generic [ref=f4e99]:
+        - heading "Пост в соцсети" [level=2] [ref=f4e100]
+        - generic [ref=f4e101]:
+          - generic [ref=f4e102]:
+            - generic [ref=f4e103]:
+              - generic [ref=f4e104]: Telegram-пост
+              - generic [ref=f4e105]: dark
+            - generic [ref=f4e107]:
+              - generic [ref=f4e108]:
+                - img "Логотип Сергея Дмитриева" [ref=f4e109]:
+                  - generic [ref=f4e111]: СД
+                - generic [ref=f4e112]:
+                  - strong [ref=f4e113]: Сергей Дмитриев
+                  - text: DevOps · Infrastructure
+              - paragraph [ref=f4e114]: Перевели платёжный сервис на очереди.
+              - paragraph [ref=f4e115]:
+                - text: "Latency p99: 800 мс → 120 мс."
+                - text: "Инфраструктурные косты: −30%."
+              - paragraph [ref=f4e116]: Никакого cutting-edge. Старый добрый RabbitMQ и честные метрики.
+          - generic [ref=f4e117]:
+            - generic [ref=f4e118]:
+              - generic [ref=f4e119]: LinkedIn-пост
+              - generic [ref=f4e120]: light
+            - generic [ref=f4e122]:
+              - generic [ref=f4e123]:
+                - img "Логотип Сергея Дмитриева" [ref=f4e124]:
+                  - generic [ref=f4e126]: СД
+                - generic [ref=f4e127]:
+                  - strong [ref=f4e128]: Сергей Дмитриев
+                  - text: DevOps Consulting
+              - paragraph [ref=f4e129]: "How we cut p99 latency by 70%: async queues over synchronous calls."
+              - paragraph [ref=f4e130]: Pragmatism over hype. Real metrics below. ⬇️
+      - generic [ref=f4e131]:
+        - heading "PDF-кейс для клиентов" [level=2] [ref=f4e132]
+        - generic [ref=f4e133]:
+          - generic [ref=f4e134]:
+            - generic [ref=f4e135]: Обложка PDF-кейса
+            - generic [ref=f4e136]: light
+          - generic [ref=f4e138]:
+            - generic [ref=f4e140]:
+              - img "Логотип Сергея Дмитриева" [ref=f4e141]:
+                - generic [ref=f4e143]: СД
+              - generic [ref=f4e144]: Дмитриев
+            - generic [ref=f4e145]:
+              - generic [ref=f4e146]: Кейс · 2026
+              - heading "Масштабирование платёжного сервиса от 1k до 50k RPS" [level=3] [ref=f4e147]:
+                - text: Масштабирование платёжного сервиса
+                - text: от 1k до 50k RPS
+              - paragraph [ref=f4e148]: Как мы сохранили SLA 99.95% при росте нагрузки в 50 раз.
+            - generic [ref=f4e149]: dmitriev.consulting · sergey@dmitriev.consulting
+  - generic [ref=f4e152]:
+    - button "Menu" [ref=f4e153]:
+      - img [ref=f4e155]
+      - generic: Menu
+    - button "Inspect" [ref=f4e159]:
+      - img [ref=f4e161]
+      - generic: Inspect
+    - button "Audit" [ref=f4e163]:
+      - img [ref=f4e165]
+      - generic: Audit
+    - button "Settings" [ref=f4e168]:
+      - img [ref=f4e170]
+      - generic: Settings

@@ -1,0 +1,78 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Логотип Сергея Дмитриева Дмитриев" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Логотип Сергея Дмитриева" [ref=e5]:
+          - generic [ref=e7]: СД
+        - generic [ref=e8]: Дмитриев
+      - navigation [ref=e9]:
+        - link "01 · Фундамент" [ref=e10] [cursor=pointer]:
+          - /url: /01-foundation
+        - link "02 · Логотип" [ref=e11] [cursor=pointer]:
+          - /url: /02-logo
+        - link "03 · Цвет" [ref=e12] [cursor=pointer]:
+          - /url: /03-color
+        - link "04 · Типографика" [ref=e13] [cursor=pointer]:
+          - /url: /04-typography
+        - link "05 · Токены" [ref=e14] [cursor=pointer]:
+          - /url: /05-tokens
+        - link "06 · Применение" [ref=e15] [cursor=pointer]:
+          - /url: /06-application
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - paragraph [ref=e18]: Брендбук · Сергей Дмитриев
+      - heading "Инфраструктура как актив, а не костыль." [level=1] [ref=e19]:
+        - text: Инфраструктура как актив,
+        - text: а не костыль.
+      - paragraph [ref=e20]: DevOps-консалтинг на основе реального опыта масштабов бигтеха. Единый источник правды для дизайнеров и AI-агентов.
+    - navigation [ref=e21]:
+      - link "01 Фундамент Манифест, позиционирование, голос и тон" [ref=e22] [cursor=pointer]:
+        - /url: /01-foundation
+        - generic [ref=e23]: "01"
+        - generic [ref=e24]:
+          - heading "Фундамент" [level=3] [ref=e25]
+          - paragraph [ref=e26]: Манифест, позиционирование, голос и тон
+      - link "02 Логотип Монограмма, словесный знак, применения" [ref=e27] [cursor=pointer]:
+        - /url: /02-logo
+        - generic [ref=e28]: "02"
+        - generic [ref=e29]:
+          - heading "Логотип" [level=3] [ref=e30]
+          - paragraph [ref=e31]: Монограмма, словесный знак, применения
+      - link "03 Цвет Палитра, темы, янтарь, статусы, контраст" [ref=e32] [cursor=pointer]:
+        - /url: /03-color
+        - generic [ref=e33]: "03"
+        - generic [ref=e34]:
+          - heading "Цвет" [level=3] [ref=e35]
+          - paragraph [ref=e36]: Палитра, темы, янтарь, статусы, контраст
+      - link "04 Типографика Шрифты, шкала, иерархия, пары" [ref=e37] [cursor=pointer]:
+        - /url: /04-typography
+        - generic [ref=e38]: "04"
+        - generic [ref=e39]:
+          - heading "Типографика" [level=3] [ref=e40]
+          - paragraph [ref=e41]: Шрифты, шкала, иерархия, пары
+      - link "05 Токены Формат W3C, как читать JSON" [ref=e42] [cursor=pointer]:
+        - /url: /05-tokens
+        - generic [ref=e43]: "05"
+        - generic [ref=e44]:
+          - heading "Токены" [level=3] [ref=e45]
+          - paragraph [ref=e46]: Формат W3C, как читать JSON
+      - link "06 Применение Баннеры, кейсы, слайды, соцсети, PDF" [ref=e47] [cursor=pointer]:
+        - /url: /06-application
+        - generic [ref=e48]: "06"
+        - generic [ref=e49]:
+          - heading "Применение" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Баннеры, кейсы, слайды, соцсети, PDF
+  - generic [ref=e54]:
+    - button "Menu" [ref=e55]:
+      - img [ref=e57]
+      - generic: Menu
+    - button "Inspect" [ref=e61]:
+      - img [ref=e63]
+      - generic: Inspect
+    - button "Audit" [ref=e65]:
+      - img [ref=e67]
+      - generic: Audit
+    - button "Settings" [ref=e70]:
+      - img [ref=e72]
+      - generic: Settings

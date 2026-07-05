@@ -29,6 +29,12 @@ a:hover {
   color: var(--amber-400);
 }
 
+/* Amber-on-light contrast rule (spec §3.1): #F59E0B fails on white, use --amber-600 in light theme. */
+[data-theme="light"] a,
+[data-theme="light"] .eyebrow {
+  color: var(--amber-600);
+}
+
 code,
 .mono {
   font-family: var(--font-mono);

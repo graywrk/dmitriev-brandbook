@@ -98,7 +98,7 @@ const statusColors = [
   .doc { padding: 48px 0 80px; }
   .doc h1 { font-size: var(--text-h1); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 16px; }
   .doc h2 { font-size: var(--text-h2); font-weight: 700; margin: 36px 0 14px; }
-  .doc p { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .doc p:not(.eyebrow) { font-size: var(--text-body); color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
   .doc .lede { font-size: var(--text-body-lg); color: var(--text); }
   .swatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   @media (max-width: 700px) { .swatch-grid { grid-template-columns: repeat(2, 1fr); } }

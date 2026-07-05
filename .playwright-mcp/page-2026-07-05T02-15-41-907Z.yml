@@ -1,0 +1,168 @@
+- generic [active] [ref=f9e1]:
+  - banner [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - link "Логотип Сергея Дмитриева Дмитриев" [ref=f9e4] [cursor=pointer]:
+        - /url: /
+        - img "Логотип Сергея Дмитриева" [ref=f9e5]:
+          - generic [ref=f9e7]: СД
+        - generic [ref=f9e8]: Дмитриев
+      - navigation [ref=f9e9]:
+        - link "01 · Фундамент" [ref=f9e10] [cursor=pointer]:
+          - /url: /01-foundation
+        - link "02 · Логотип" [ref=f9e11] [cursor=pointer]:
+          - /url: /02-logo
+        - link "03 · Цвет" [ref=f9e12] [cursor=pointer]:
+          - /url: /03-color
+        - link "04 · Типографика" [ref=f9e13] [cursor=pointer]:
+          - /url: /04-typography
+        - link "05 · Токены" [ref=f9e14] [cursor=pointer]:
+          - /url: /05-tokens
+        - link "06 · Применение" [ref=f9e15] [cursor=pointer]:
+          - /url: /06-application
+  - main [ref=f9e16]:
+    - article [ref=f9e17]:
+      - paragraph [ref=f9e18]: Раздел 03
+      - heading "Цвет" [level=1] [ref=f9e19]
+      - paragraph [ref=f9e20]: Янтарь — единственный UI-акцент. Тёмная тема основная, светлая — для документов и PDF.
+      - generic [ref=f9e21]:
+        - heading "Тёмная тема · основная" [level=2] [ref=f9e22]
+        - generic [ref=f9e23]:
+          - generic [ref=f9e26]:
+            - generic [ref=f9e27]: Canvas
+            - generic [ref=f9e28]: Фон страницы
+            - generic [ref=f9e29]: "#0A0A0B · --canvas"
+          - generic [ref=f9e32]:
+            - generic [ref=f9e33]: Surface
+            - generic [ref=f9e34]: Карточки, панели
+            - generic [ref=f9e35]: "#101012 · --surface"
+          - generic [ref=f9e38]:
+            - generic [ref=f9e39]: Elevated
+            - generic [ref=f9e40]: Приподнятые элементы
+            - generic [ref=f9e41]: "#141416 · --elevated"
+          - generic [ref=f9e44]:
+            - generic [ref=f9e45]: Border
+            - generic [ref=f9e46]: Тонкие границы
+            - generic [ref=f9e47]: "#1F1F23 · --border"
+          - generic [ref=f9e50]:
+            - generic [ref=f9e51]: Text
+            - generic [ref=f9e52]: Основной текст
+            - generic [ref=f9e53]: "#F4F4F5 · --text"
+          - generic [ref=f9e56]:
+            - generic [ref=f9e57]: Text Dim
+            - generic [ref=f9e58]: Вторичный текст
+            - generic [ref=f9e59]: "#A1A1AA · --text-dim"
+      - generic [ref=f9e60]:
+        - heading "Светлая тема · документы и PDF" [level=2] [ref=f9e61]
+        - generic [ref=f9e62]:
+          - generic [ref=f9e65]:
+            - generic [ref=f9e66]: Canvas
+            - generic [ref=f9e67]: Тёплый оффвайт
+            - generic [ref=f9e68]: "#FAFAF9 · --canvas"
+          - generic [ref=f9e71]:
+            - generic [ref=f9e72]: Surface
+            - generic [ref=f9e73]: Карточки
+            - generic [ref=f9e74]: "#FFFFFF · --surface"
+          - generic [ref=f9e77]:
+            - generic [ref=f9e78]: Border
+            - generic [ref=f9e79]: Тонкие границы
+            - generic [ref=f9e80]: "#E7E5E4 · --border"
+          - generic [ref=f9e83]:
+            - generic [ref=f9e84]: Text
+            - generic [ref=f9e85]: Основной текст
+            - generic [ref=f9e86]: "#1C1917 · --text"
+          - generic [ref=f9e89]:
+            - generic [ref=f9e90]: Text Dim
+            - generic [ref=f9e91]: Вторичный текст
+            - generic [ref=f9e92]: "#57534E · --text-dim"
+      - generic [ref=f9e93]:
+        - heading "Янтарная шкала · акцент" [level=2] [ref=f9e94]
+        - generic [ref=f9e95]:
+          - generic [ref=f9e96]:
+            - generic [ref=f9e98]: "900"
+            - generic [ref=f9e99]: "#451A03"
+          - generic [ref=f9e100]:
+            - generic [ref=f9e102]: "700"
+            - generic [ref=f9e103]: "#92400E"
+          - generic [ref=f9e104]:
+            - generic [ref=f9e106]: 600 · deep
+            - generic [ref=f9e107]: "#D97706"
+          - generic [ref=f9e108]:
+            - generic [ref=f9e110]: 500 · base
+            - generic [ref=f9e111]: "#F59E0B"
+          - generic [ref=f9e112]:
+            - generic [ref=f9e114]: 400 · bright
+            - generic [ref=f9e115]: "#FBBF24"
+      - generic [ref=f9e116]:
+        - heading "Статусные цвета" [level=2] [ref=f9e117]
+        - paragraph [ref=f9e118]: Только для семантических состояний систем и процессов. Никогда — как UI-акцент.
+        - generic [ref=f9e119]:
+          - generic [ref=f9e122]:
+            - generic [ref=f9e123]: Success
+            - generic [ref=f9e124]: healthy, running
+            - generic [ref=f9e125]: "#10B981 · --status-success"
+          - generic [ref=f9e128]:
+            - generic [ref=f9e129]: Warning
+            - generic [ref=f9e130]: degraded
+            - generic [ref=f9e131]: "#F97316 · --status-warning"
+          - generic [ref=f9e134]:
+            - generic [ref=f9e135]: Error
+            - generic [ref=f9e136]: crash, down
+            - generic [ref=f9e137]: "#EF4444 · --status-error"
+          - generic [ref=f9e140]:
+            - generic [ref=f9e141]: Info
+            - generic [ref=f9e142]: deploying
+            - generic [ref=f9e143]: "#3B82F6 · --status-info"
+        - generic [ref=f9e144]:
+          - generic [ref=f9e145]: $ kubectl get pods
+          - generic [ref=f9e146]:
+            - generic [ref=f9e147]:
+              - text: api-gateway
+              - generic [ref=f9e149]: Running
+            - generic [ref=f9e150]:
+              - text: payment-service
+              - generic [ref=f9e152]: Running
+            - generic [ref=f9e153]:
+              - text: search-indexer
+              - generic [ref=f9e155]: Degraded
+            - generic [ref=f9e156]:
+              - text: legacy-worker
+              - generic [ref=f9e158]: CrashLoop
+            - generic [ref=f9e159]:
+              - text: analytics-sync
+              - generic [ref=f9e161]: Deploying
+      - generic [ref=f9e162]:
+        - heading "Правила" [level=2] [ref=f9e163]
+        - generic [ref=f9e164]:
+          - generic [ref=f9e165]:
+            - generic [ref=f9e166]:
+              - generic [ref=f9e167]: DO
+              - heading "Янтарь — только акцент" [level=4] [ref=f9e168]
+            - generic [ref=f9e169]: CTA, ссылки, ключевые числа. Никогда как фон блока.
+          - generic [ref=f9e170]:
+            - generic [ref=f9e171]:
+              - generic [ref=f9e172]: DON'T
+              - heading "Не вводить второй цвет" [level=4] [ref=f9e173]
+            - generic [ref=f9e174]: Один акцент = одна система. Статусы — только для систем.
+          - generic [ref=f9e175]:
+            - generic [ref=f9e176]:
+              - generic [ref=f9e177]: DO
+              - heading "Контраст ≥ 7:1 для текста" [level=4] [ref=f9e178]
+            - generic [ref=f9e179]: Основные комбинации проходят WCAG AAA.
+          - generic [ref=f9e180]:
+            - generic [ref=f9e181]:
+              - generic [ref=f9e182]: DON'T
+              - heading "Янтарь на белом" [level=4] [ref=f9e183]
+            - generic [ref=f9e184]: "#F59E0B на белом — низкий контраст. На светлом — #D97706."
+  - generic [ref=f9e187]:
+    - button "Menu" [ref=f9e188]:
+      - img [ref=f9e190]
+      - generic: Menu
+    - button "Inspect" [ref=f9e194]:
+      - img [ref=f9e196]
+      - generic: Inspect
+    - button "Audit" [ref=f9e198]:
+      - img [ref=f9e200]
+      - generic: Audit
+    - button "Settings" [ref=f9e203]:
+      - img [ref=f9e205]
+      - generic: Settings
