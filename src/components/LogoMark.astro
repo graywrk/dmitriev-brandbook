@@ -6,7 +6,7 @@ interface Props {
 const { size = 52, variant = 'mark' } = Astro.props;
 const fontSize = Math.round(size * 0.42);
 const radius = Math.round(size * 0.21);
-const gid = `amber-${size}`;
+const gid = `amber-${crypto.randomUUID().slice(0, 8)}`;
 ---
 {variant === 'mark' ? (
   <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип Сергея Дмитриева">
@@ -31,7 +31,7 @@ const gid = `amber-${size}`;
   </svg>
 ) : (
   <span class="logo-full" style={`--logo-size:${size}px`}>
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип Сергея Дмитриева">
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
       <defs>
         <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="var(--amber-400)" />

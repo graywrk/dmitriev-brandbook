@@ -9,7 +9,7 @@ import TypeSpecimen from '../components/TypeSpecimen.astro';
     <p class="lede">Два шрифта: Golos Text для всего текста, JetBrains Mono для кода и технических акцентов. Оба с полной кириллицей.</p>
 
     <section>
-      <h2>Шрифты</h2>
+      <h2 id="fonts">Шрифты</h2>
       <div class="font-block">
         <div class="font-block__name">Golos Text <span class="font-block__role">— заголовки и текст</span></div>
         <TypeSpecimen font="sans" size="2.5rem" weight={700} sample="Инфраструктура как актив" />
@@ -22,7 +22,7 @@ import TypeSpecimen from '../components/TypeSpecimen.astro';
     </section>
 
     <section>
-      <h2>Шкала размеров</h2>
+      <h2 id="scale">Шкала размеров</h2>
       <div class="scale">
         <div class="scale__row"><span class="scale__token mono">text-h1 · 2.125rem</span><span style="font-size:var(--text-h1);font-weight:700;letter-spacing:-0.02em">Масштаб без хаоса</span></div>
         <div class="scale__row"><span class="scale__token mono">text-h2 · 1.5rem</span><span style="font-size:var(--text-h2);font-weight:700">Принципы моей работы</span></div>
@@ -33,7 +33,7 @@ import TypeSpecimen from '../components/TypeSpecimen.astro';
     </section>
 
     <section>
-      <h2>Правила</h2>
+      <h2 id="rules">Правила</h2>
       <ul>
         <li>Межстрочный: 1.5–1.6 для body, 1.1–1.2 для крупных заголовков.</li>
         <li>Letter-spacing: −0.02em для H1/H2, 0.22em uppercase для eyebrow.</li>

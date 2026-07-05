@@ -39,21 +39,21 @@ const statusColors = [
     <p class="lede">Янтарь — единственный UI-акцент. Тёмная тема основная, светлая — для документов и PDF.</p>
 
     <section>
-      <h2>Тёмная тема · основная</h2>
+      <h2 id="dark-theme">Тёмная тема · основная</h2>
       <div class="swatch-grid">
         {darkPalette.map((c) => <Swatch name={c.name} hex={c.hex} token={c.token} role={c.role} />)}
       </div>
     </section>
 
     <section>
-      <h2>Светлая тема · документы и PDF</h2>
+      <h2 id="light-theme">Светлая тема · документы и PDF</h2>
       <div class="swatch-grid">
         {lightPalette.map((c) => <Swatch name={c.name} hex={c.hex} token={c.token} role={c.role} />)}
       </div>
     </section>
 
     <section>
-      <h2>Янтарная шкала · акцент</h2>
+      <h2 id="amber-scale">Янтарная шкала · акцент</h2>
       <div class="amber-scale">
         {amberScale.map((a) => (
           <div class="amber-step">
@@ -66,7 +66,7 @@ const statusColors = [
     </section>
 
     <section>
-      <h2>Статусные цвета</h2>
+      <h2 id="status-colors">Статусные цвета</h2>
       <p>Только для семантических состояний систем и процессов. Никогда — как UI-акцент.</p>
       <div class="swatch-grid">
         {statusColors.map((c) => <Swatch name={c.name} hex={c.hex} token={c.token} role={c.sem} />)}
@@ -84,7 +84,7 @@ const statusColors = [
     </section>
 
     <section>
-      <h2>Правила</h2>
+      <h2 id="rules">Правила</h2>
       <div class="rules-grid">
         <DoDont kind="do" title="Янтарь — только акцент">CTA, ссылки, ключевые числа. Никогда как фон блока.</DoDont>
         <DoDont kind="dont" title="Не вводить второй цвет">Один акцент = одна система. Статусы — только для систем.</DoDont>

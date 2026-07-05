@@ -9,7 +9,7 @@ import DoDont from '../components/DoDont.astro';
     <h1>Логотип</h1>
 
     <section>
-      <h2>Состав</h2>
+      <h2 id="composition">Состав</h2>
       <p>
         Логотип состоит из <strong>монограммы «СД»</strong> в янтарном градиентном
         квадрате и <strong>словесного знака «Дмитриев»</strong>. Градиент идёт
@@ -21,7 +21,7 @@ import DoDont from '../components/DoDont.astro';
     </section>
 
     <section>
-      <h2>Варианты</h2>
+      <h2 id="variants">Варианты</h2>
       <div class="variants">
         <div class="variant">
           <LogoMark size={56} variant="full" />
@@ -39,7 +39,7 @@ import DoDont from '../components/DoDont.astro';
     </section>
 
     <section>
-      <h2>Минимальный размер</h2>
+      <h2 id="min-size">Минимальный размер</h2>
       <p>Цифровая среда: <strong>24px</strong>. Печать: <strong>12 мм</strong>. Ниже — не использовать.</p>
       <div class="sizes">
         <div class="size"><LogoMark size={52} /><span>52px</span></div>
@@ -49,7 +49,7 @@ import DoDont from '../components/DoDont.astro';
     </section>
 
     <section>
-      <h2>Охранное поле (clear space)</h2>
+      <h2 id="clear-space">Охранное поле (clear space)</h2>
       <p>Вокруг логотипа оставляется свободное пространство, равное <strong>высоте монограммы</strong> со всех сторон.</p>
       <div class="clearspace">
         <div class="clearspace__inner"><LogoMark size={48} variant="full" /></div>
@@ -57,7 +57,7 @@ import DoDont from '../components/DoDont.astro';
     </section>
 
     <section>
-      <h2>Что нельзя делать</h2>
+      <h2 id="donts">Что нельзя делать</h2>
       <div class="donts-grid">
         <DoDont kind="dont" title="Не растягивать">Искажать пропорции монограммы.</DoDont>
         <DoDont kind="dont" title="Не менять цвета">Использовать цвета вне янтарной шкалы.</DoDont>
