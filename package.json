@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "node tokens/sync.js",
-    "prebuild": "node tokens/sync.js",
+    "predev": "node tokens/sync.js && bash scripts/build-og-image.sh",
+    "prebuild": "node tokens/sync.js && bash scripts/build-og-image.sh",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

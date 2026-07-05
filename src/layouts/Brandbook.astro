@@ -8,6 +8,10 @@ interface Props {
 }
 
 const { title, section } = Astro.props;
+const SITE_URL = Astro.site?.toString().replace(/\/$/, '') || 'https://brandbook.graywrk.ru';
+const PAGE_PATH = section ? `/${section}/` : '/';
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const DESCRIPTION = 'Брендбук Сергея Дмитриева — DevOps-консалтинг на основе реального опыта масштабов бигтеха. Единый источник правды для дизайнеров и AI-агентов.';
 const sections = [
   { id: '01-foundation', label: '01 · Фундамент' },
   { id: '02-logo', label: '02 · Логотип' },
@@ -23,7 +27,27 @@ const sections = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} · Брендбук Сергея Дмитриева</title>
+    <meta name="description" content={DESCRIPTION} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Брендбук Сергея Дмитриева" />
+    <meta property="og:title" content={`${title} · Брендбук Сергея Дмитриева`} />
+    <meta property="og:description" content={DESCRIPTION} />
+    <meta property="og:url" content={PAGE_URL} />
+    <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Инфраструктура как актив, а не костыль — брендбук Сергея Дмитриева" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} · Брендбук Сергея Дмитриева`} />
+    <meta name="twitter:description" content={DESCRIPTION} />
+    <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
