@@ -29,9 +29,11 @@ const { title, theme = 'dark' } = Astro.props;
   }
   .template__theme--dark { background: color-mix(in srgb, var(--amber-500) 12%, transparent); color: var(--amber-500); }
   .template__theme--light { background: color-mix(in srgb, var(--text-mute) 14%, transparent); color: var(--text-dim); }
-  .template__canvas { padding: 28px 24px; }
-  /* the inner [data-theme] resolves tokens for the preview */
-  .template__canvas[data-theme="light"] {
+  .template__canvas {
+    padding: 28px 24px;
+    /* Apply the theme's tokens so the preview always renders against its own
+       canvas, regardless of the surrounding page theme. Without this, a dark
+       TemplateCard on a light page would show light-on-transparent (washed out). */
     background: var(--canvas);
     color: var(--text);
   }
